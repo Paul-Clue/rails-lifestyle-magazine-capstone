@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if @article.image.attached? %>
+  <%= image_tag ("#{url_for(@article.image)}"), :size => "260x180", class: "img-responsive" %>
+<% end %>
+
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
@@ -7,7 +11,7 @@
 
 <p>
   <strong>Story:</strong>
-  <%= @article.story %>
+  <%= @article.text %>
 </p>
 
 <p>
@@ -22,7 +26,7 @@
 
 <p>
   <strong>Date created:</strong>
-  <%= @article.date_created %>
+  <%= @article.createdAt %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |

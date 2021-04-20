@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    @article.image.attach(params[:image])
   end
 
   # POST /articles or /articles.json
@@ -64,6 +65,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :story, :image, :user_id, :date_created)
+      params.require(:article).permit(:title, :text, :image, :user_id, :createdAt)
     end
 end

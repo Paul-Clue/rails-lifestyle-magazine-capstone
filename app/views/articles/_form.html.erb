@@ -18,22 +18,21 @@
 
   <div class="field">
     <%= form.label :story %>
-    <%= form.text_area :story %>
+    <%= form.text_area :text %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+    <%= form.label :Image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
   </div>
 
   <div class="field">
-    <%= form.label :date_created %>
-    <%= form.date_select :date_created %>
+    <%= form.label :createdAt %>
+    <%= form.date_select :createdAt %>
   </div>
 
   <div class="actions">
