@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
     User.find_by(id: session[:user_id])
   end
 
+  def current_article
+    Article.find_by(id: params[:id])
+  end
+
   def logged_in?
     !current_user.nil?
   end
