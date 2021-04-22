@@ -7,6 +7,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def profile
+    @user_articles = Article.where(user_id: current_user.id)
+  end
+
   # GET /users/1 or /users/1.json
   def show
   end
@@ -71,5 +75,9 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:user_name)
+    end
+
+    def category_params
+      params.require(:category).permit(:name, :priority)
     end
 end

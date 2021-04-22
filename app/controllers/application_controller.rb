@@ -3,6 +3,26 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :logged_in?
 
+  # def tesla
+  #   @tesla = Article.all.tesla
+  # end
+
+  # def ford
+  #   @ford = Article.all.ford
+  # end
+
+  # def gm
+  #   @gm = Article.all.gm
+  # end
+
+  # def lucid
+  #   @lucid = Article.all.lucid
+  # end
+
+  # def battery
+  #   @battery = Article.all.battery
+  # end
+
   def current_user
     User.find_by(id: session[:user_id])
   end
