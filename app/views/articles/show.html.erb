@@ -1,30 +1,16 @@
-<p id="notice"><%= notice %></p>
-<%= display_image %>
+<div style="background-color: white; height: 100%px; z-index: 1;">
+  <p id="notice"><%= notice %></p>
+  <%= display_image %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <p style="z-index: 2;">
+    <strong style="z-index: 2; color: orange;">Title:</strong><br>
+    <span ><%= @article.title %></span>
+  </p>
 
-<p>
-  <strong>Story:</strong>
-  <%= @article.text %>
-</p>
+  <p>
+    <strong style='color: orange;'>Story:</strong><br>
+    <span><%= @article.text %></span>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @article.image %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @article.user_id %>
-</p>
-
-<p>
-  <strong>Date created:</strong>
-  <%= @article.created_at %>
-</p>
-<%= render 'form2', vote: @vote %>
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <%= render 'form2', vote: @vote %>
+</div>

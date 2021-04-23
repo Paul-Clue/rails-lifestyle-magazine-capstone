@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :articles
+  resources :categories, only: [:show]
   root to: "sessions#welcome"
   resources :users, only: [:new, :create]
   get 'login', to: 'sessions#new'

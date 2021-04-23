@@ -1,0 +1,21 @@
+
+
+
+  <div class="all-container">
+    <% @article.each do |it| %>
+      <div class="all-item">
+        <div class="d-flex">
+          <div>
+          <%= image_tag url_for(@article[1].image), style: "width: 100px;"%>
+          </div>
+          <div>
+            <h2 style="color: white;"><%= it.title %></h2>
+          </div>
+          &npsb;<%= us_name %>
+        </div>
+        <div>
+          <%= render 'form3', vote: @vote %>
+        </div>
+      </div>
+    <% end %>
+  </div>

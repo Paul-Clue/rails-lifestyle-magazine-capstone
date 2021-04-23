@@ -1,46 +1,67 @@
-<%= form_with(model: article) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-      <ul>
-        <% article.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div style="width: 100%; height: 100%; background-image: url("#{url_for(@article.image)}");">
+<div class="card  card1 mb-3" style="max-width: 80rem; height: 32rem;">
+  <div class="card-header card-header1 bg-transparent ">Header</div>
+  <%= form_with(model: article) do |form| %>
+    <% if article.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+  
+        <ul>
+          <% article.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :story %>
+      <%= form.text_area :text %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :Image %>
+      <%= form.file_field :image %>
+    </div>
+  
+    <div class="field">
+    <%= form.hidden_field :user_id, :value => current_user.id %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :category %></br>
+      <%= form.select :category_id, [['tesla', 1], ['ford', 2], ['gm', 3], ['lucid', 4], ['battery', 4]] %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :createdAt %>
+      <%= form.date_select :createdAt %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <%= link_to 'Back', articles_path %>
   </div>
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
 
-  <div class="field">
-    <%= form.label :story %>
-    <%= form.text_area :text %>
-  </div>
 
-  <div class="field">
-    <%= form.label :Image %>
-    <%= form.file_field :image %>
-  </div>
 
-  <div class="field">
-  <%= form.hidden_field :user_id, :value => current_user.id %>
-  </div>
+  
+</div>
 
-  <div class="field">
-    <%= form.label :category %></br>
-    <%= form.select :category_id, [['tesla', 1], ['ford', 2], ['gm', 3], ['lucid', 4], ['battery', 4]] %>
-  </div>
 
-  <div class="field">
-    <%= form.label :createdAt %>
-    <%= form.date_select :createdAt %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

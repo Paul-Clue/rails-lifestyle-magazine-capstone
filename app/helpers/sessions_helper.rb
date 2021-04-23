@@ -2,8 +2,9 @@ module SessionsHelper
   def logout_button
     @str = ''
     if logged_in?
-      @str += "<h1>You are Logged In, #{current_user.user_name}</h1>"
-      @str += button_to("LogOut", '/logout', method: :get)
+      @str =+ "<div style='z-index: 2; position: absolute'>"
+      @str += link_to("LogOut", '/logout', method: :get, style: 'color: grey; text-decoration: none;')
+      @str += '</div>'
       @str.html_safe
     else
       @str += "<h1>Login or Sign Up</h1>"
@@ -11,5 +12,10 @@ module SessionsHelper
       @str += button_to "Sign Up", '/users/new', method: :get
       @str.html_safe
     end
+  end
+
+  def pic
+  @pic = ''
+  @pic += "<div style='background-image: url(#{url_for(@articles.first.image)})';>"
   end
 end

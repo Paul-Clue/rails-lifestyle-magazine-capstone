@@ -4,13 +4,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
-    @articles = Article.all
-    @recent_tesla_article = Article.all.tesla.first
-    @recent_ford_article = Article.all.ford.first
-    @recent_gm_article = Article.all.gm.first
-    @recent_lucid_article = Article.all.lucid.first
-    @recent_battery_article = Article.all.battery.first
-    @most_popular_article = Vote.popular_article
+    
   end
 
   # GET /articles/1 or /articles/1.json
@@ -39,14 +33,6 @@ class ArticlesController < ApplicationController
       @bat = Category.create(:name =>"battery", :priority => 5)
     end
     @article = Article.new(article_params)
-
-    @artid = @article.id
-    @link = Link.create(link_params)
-   
-    # @link.article_id = @artid
-    # @cat = Category.where('(name = ?)', 'tesla').first
-    # @link.category_id = @cat.id
-    # Link.create(:category_id => cate, :article_id => "2")
 
     respond_to do |format|
       if @article.save
@@ -90,9 +76,5 @@ class ArticlesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(:title, :text, :image, :user_id, :category_id)
-    end
-
-    def link_params
-      params.permit(:article_id, :category_id)
     end
 end
