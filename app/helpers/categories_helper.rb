@@ -12,7 +12,7 @@ module CategoriesHelper
     @article.each do |item|
       @user.each do |use|
         if use.id == item.user_id
-          @used +=  "<h3 style='color: white;'>#{use.user_name} </h3>"
+          @used +=  "<p style='color: white;'>#{use.user_name} </p>"
           break
         end
       end

@@ -1,21 +1,33 @@
 
 
-
-  <div class="all-container">
-    <% @article.each do |it| %>
+  
+  <div class="all-container grid-container g2" style="background-color: rgba(360, 360, 360, .1); width: 115%; margin-left: -98px;">
+    <% @article.each_with_index do |it, ind| %>
+      
       <div class="all-item">
-        <div class="d-flex">
-          <div>
-          <%= image_tag url_for(@article[1].image), style: "width: 100px;"%>
+        <div class="">
+          <div style="background-color: rgba(290, 360, 360, .8); width: 745px; height: 300px;">
+          <p style="color: white;"><%= image_tag Article.where(:id => it.user_id).first.image, style: "width: 745px; height: 300px; object-fit: cover;"%></p>
           </div>
           <div>
             <h2 style="color: white;"><%= it.title %></h2>
           </div>
-          &npsb;<%= us_name %>
+          <div>
+            <p style="color: white;"><%= it.text %></p>
+          </div>
+          <p style="color: white; font-size: 12px;"><%= User.where(:id => it.user_id).first.user_name %></p>
         </div>
         <div>
           <%= render 'form3', vote: @vote %>
         </div>
+        <br>
+        <br>
+        <br>
+        
       </div>
+    
     <% end %>
   </div>
+
+
+
