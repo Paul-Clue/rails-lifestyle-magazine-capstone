@@ -2,11 +2,11 @@ class VoteController < ApplicationController
   def index
   end
   def create
-    @vote = Vote.new(vote_params)
-
+    @vote = Vote.new(:user_id => current_user.id)
+    @vote.article_id = params[:article_id]
     respond_to do |format|
       if @vote.save
-        format.html { redirect_to article_path(params[:id]), notice: "Vote was successfully cast." }
+        format.html { redirect_to category_path(params[:id]), notice: "Vote was successfully cast." }
         format.json { render :show, status: :created, location: @vote }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -1,6 +1,6 @@
 <div style="width: 100%; height: 100%; background-image: url("#{url_for(@article.image)}");">
 <div class="card  card1 mb-3" style="max-width: 80rem; height: 32rem;">
-  <div class="card-header card-header1 bg-transparent ">Header</div>
+  <div class="card-header card-header1 bg-transparent ">WRITE A NEW ARTICLE</div>
   <%= form_with(model: article) do |form| %>
     <% if article.errors.any? %>
       <div id="error_explanation">
@@ -14,52 +14,40 @@
       </div>
     <% end %>
   
-    <div class="field">
-      <%= form.label :title %>
-      <%= form.text_field :title %>
+    <div class="mb-3">
+      <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control'  %>
     </div>
   
-    <div class="field">
-      <%= form.label :story %>
-      <%= form.text_area :text %>
+    <div class="mb-3">
+      <%= form.label :story, class: 'form-label' %>
+      <%= form.text_area :text, class: 'form-control' %>
     </div>
   
-    <div class="field">
-      <%= form.label :Image %>
-      <%= form.file_field :image %>
+    <div class="mb-3">
+      <%= form.label :Image, class: 'form-label' %>
+      <%= form.file_field :image, class: 'form-control' %>
     </div>
   
-    <div class="field">
+    <div class="mb-3">
     <%= form.hidden_field :user_id, :value => current_user.id %>
     </div>
   
-    <div class="field">
-      <%= form.label :category %></br>
-      <%= form.select :category_id, [['tesla', 1], ['ford', 2], ['gm', 3], ['lucid', 4], ['battery', 4]] %>
+    <div class="mb-3">
+      <%= form.label :category, class: 'form-label' %></br>
+      <%= form.select :category_id, [['tesla', 1], ['ford', 2], ['gm', 3], ['lucid', 4], ['battery', 4]], class: 'form-control' %>
     </div>
   
-    <div class="field">
-      <%= form.label :createdAt %>
-      <%= form.date_select :createdAt %>
+    <div class="mb-3">
+      <%= form.label :Date, class: 'form-label' %>
+      <%= form.date_select :createdAt, class: 'form-control' %>
     </div>
   
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit class: 'btn btn-info', styel: 'align: center;'%> 
     </div>
-  <% end %>
-  <%= link_to 'Back', articles_path %>
-  </div>
-  <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
 
-
-
+<%end%>
   
 </div>
 

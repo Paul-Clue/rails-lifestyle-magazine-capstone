@@ -7,4 +7,6 @@ module CategoriesHelper
 
     return @user2.html_safe
   end
+
+  
 end

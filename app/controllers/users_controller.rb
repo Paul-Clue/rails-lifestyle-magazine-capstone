@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  skip_before_action :authorized, only: [:new, :create]
   before_action :set_user, only: %i[ show edit update destroy ]
+  skip_before_action :authorized, only: [:new, :create]
 
   # GET /users or /users.json
   def index
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to '/welcome', notice: "User was successfully created." }
+        format.html { redirect_to '/welcome', notice: "WELCOME" }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }

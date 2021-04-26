@@ -6,11 +6,14 @@ body{
 }
 
 .card1{
-  border: 5px solid orange;
+  border: 5px solid white;
 }
 
 .card-header1{
-  border-bottom: 5px solid orange;
+  border-bottom: 5px solid royalblue;
+  text-align: center;
+  color: royalblue;
+  font-weight: bold;
 }
 
 //welcome page
@@ -175,4 +178,18 @@ li{
 
   grid-column: 1 / 1.5;
   height: 315px;
+}
+
+/* The animation code */
+@keyframes example {
+  from {color: white; font-size: 70px;}
+  to {color: green; font-size: 100px;}
+}
+
+/* The element to apply the animation to */
+.notice2{
+  width: 100px;
+  height: 100px;
+  animation-name: example;
+  animation-duration: 1s;
 }
