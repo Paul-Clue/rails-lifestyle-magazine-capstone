@@ -1,11 +1,8 @@
 class Article < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  has_and_belongs_to_many :categories
-
-  belongs_to :user
+  has_and_belongs_to_many :categories, foreign_key: :article_id
   has_many :votes, foreign_key: :article_id
-  has_and_belongs_to_many :categories
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
 
