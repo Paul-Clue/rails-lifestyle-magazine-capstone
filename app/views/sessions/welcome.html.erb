@@ -1,44 +1,41 @@
-<h1>Welcome</h1>
-
-<div style='background-image: url(#{url_for(@articles.first.image)});'>
-
-
-
-      
-      <%= image_tag("#{url_for(@most_popular_article2.image)}", style: 'position: absolute; left:2px; top: 103px; z-index: 0; height:55%;width:100%;', class: 'ctg-image')%>
-
-      <img src="#{url_for(@recent_tesla_article.image)}" width='300' >
+      <div class="main_img_div"><%= image_tag("#{url_for(@most_popular_article2.image)}", class: 'ctg-image ctg-img_1')%></div>
       <p style="color: orange; z-index: 2; position: absolute; bottom: 300px;"><%= link_to "#{@most_popular_article2.title}",  "articles/#{@most_popular_article2.id}",  style: 'z-index: 2; position: absolute; color: orange; left: -90px; text-decoration: none;' %></a></p>
       <p style="color: white; z-index: 2; position: absolute; bottom: 250px; left: 20px;"><%= @most_popular_article2.text %></p>
       </div>
-      <div class="grid-container">
+
+
+
+      <div class="grid-container g3">
         <div class="grid-item">
         <span style="z-index: 2; position: absolute; color: white; left: 20px; border-bottom: 3px solid yellow;">
-        <%= @recent_tesla_article.title %></span>
-        <span style="z-index: 2; position: absolute; color: white; left: 20px; bottom: 20px; ">
-        <%= @recent_tesla_article.text %></span>
-        <%= image_tag("#{url_for(@recent_tesla_article.image)}", style: ' height: 100%; width: 100%;', class: 'ctg-image')%>
+        <%= link_to @recent_tesla_article.title, category_path(@recent_tesla_article.id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_tesla_article.text %></p>
+        <%= image_tag("#{url_for(@recent_tesla_article.image)}", style: ' height: 100%; width: 100%; object-fit: cover;', class: 'ctg-image')%>
         </div>
+
         <div class="grid-item">
-        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid orange;">
-        <%= @recent_tesla_article.title %></span>
-        <span style="z-index: 2; position: absolute; color: white;  bottom: 20px; ">
-        <%= @recent_tesla_article.text %></span>
-        <%= image_tag("#{url_for(@recent_tesla_article.image)}", style: ' height: 100%; width: 100%;', class: 'ctg-image')%>
+        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid yellow; text-decoraiton: none">
+        <%= link_to @recent_ford_article.title, category_path(@recent_ford_article.id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_ford_article.text %></p>
+        <%= image_tag("#{url_for(@recent_ford_article.image)}", style: ' height: 100%; width: 100%; object-fit: cover;', class: 'ctg-image')%>
         </div>
+
         <div class="grid-item">
-        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid orange;">
-        <%= @recent_tesla_article.title %></span>
-        <span style="z-index: 2; position: absolute; color: white;  bottom: 20px; ">
-        <%= @recent_tesla_article.text %></span>
-        <%= image_tag("#{url_for(@recent_tesla_article.image)}", style: ' height: 100%; width: 100%;', class: 'ctg-image')%>
+        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid yellow; text-decoraiton: none">
+        <%= link_to @recent_gm_article.title, category_path(@recent_gm_article.id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_gm_article.text%></p>
+        <%= image_tag("#{url_for(@recent_gm_article.image)}", style: ' height: 100%; width: 100%; object-fit: cover;', class: 'ctg-image')%>
         </div>
+
         <div class="grid-item">
-        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid orange;">
-        <%= @recent_tesla_article.title %></span>
-        <span style="z-index: 2; position: absolute; color: white;  bottom: 20px; ">
-        <%= @recent_tesla_article.text %></span>
-        <%= image_tag("#{url_for(@recent_tesla_article.image)}", style: ' height: 100%; width: 100%;', class: 'ctg-image')%>
+        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid yellow; text-decoraiton: none">
+        <%= link_to @recent_lucid_article.title, category_path(@recent_lucid_article.id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_lucid_article.text%></p>
+        <%= image_tag("#{url_for(@recent_lucid_article.image)}", style: ' height: 100%; width: 100%; object-fit: cover;', class: 'ctg-image')%>
         </div>
 </div>
 

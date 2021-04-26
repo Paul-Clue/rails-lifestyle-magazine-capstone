@@ -1,23 +1,10 @@
 module CategoriesHelper
-  def us_name
+  def us_name(id)
+    @cat_id = Article.find(params[:id]).category_id
+    @article3 = Article.where('(category_id = ?)', @cat_id)
+    @user = User.find(id).user_name
+    @user2 = "#{@user}"
 
-    @user = []
-    @article = Article.where(:category_id => params[:id])
-    @article.each do |art|
-      @user = User.where(:id => art.user_id)
-      break
-    end
-
-    @used = '' 
-    @article.each do |item|
-      @user.each do |use|
-        if use.id == item.user_id
-          @used +=  "<p style='color: white;'>#{use.user_name} </p>"
-          break
-        end
-      end
-    end
-
-    @used.html_safe
+    return @user2.html_safe
   end
 end

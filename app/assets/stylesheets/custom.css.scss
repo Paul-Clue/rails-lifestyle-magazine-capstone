@@ -1,6 +1,10 @@
 // @import "bootstrap"
 
 //form new article page styling
+body{
+  overflow-x: hidden;
+}
+
 .card1{
   border: 5px solid orange;
 }
@@ -9,10 +13,29 @@
   border-bottom: 5px solid orange;
 }
 
+//welcome page
+.main_img_div{
+ position: absolute;
+ left:2px;
+ top: 104px;
+ z-index: 0;
+ height:56%;
+ width:100%;
+}
+.ctg-img_1{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
 
+.art_link{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
 
-
-//form new article page styling
+//form new application page styling
 
 nav{
   background-color: white;
@@ -57,10 +80,25 @@ li{
   margin-left: -40%;
 }
 
+.soc{
+  margin-right: -80%;
+}
+
+.footer {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 720px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+// Welcome page
 .grid-container {
  
   width: 100%;
-  height: 25%;
+  height: 24%;
   left: 0;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -70,6 +108,11 @@ li{
 .g2{
   grid-template-columns: auto auto;
 }
+.g3{
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+}
 .grid-item {
   // background-color: rgba(255, 255, 255, 0.8);
   padding: 0;
@@ -77,15 +120,59 @@ li{
   text-align: center;
 }
 
-.soc{
-  margin-right: -80%;
+.welcome_text{
+  position: absolute;
+  bottom: -230px;
+  color: blanchedalmond;
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 2;
+  width: 200px;
+  height: 20px;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+
+// Categories page
+
+.cat_grid{
+  position: absolute;
   width: 100%;
-  color: white;
-  text-align: center;
+  height: 100%;
+  left: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgba(300, 300, 300, .9);
+  grid-gap: 0 0;
+  padding: 0;
+}
+
+.cat_title{
+  color: darkslategray;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 5;
+}
+
+.cat_text{
+  color: darkslategray;
+  width: 220px;
+  height: 150px;
+  z-index: 5;
+}
+
+.cat_auth_name{
+  color: darkslategray;
+}
+
+.item1 {
+  grid-column: 1 / 1.5;
+  background-color: white;
+  border-bottom: 1px solid darkslategray;
+  height: 315px;
+}
+
+.item2{
+
+  grid-column: 1 / 1.5;
+  height: 315px;
 }

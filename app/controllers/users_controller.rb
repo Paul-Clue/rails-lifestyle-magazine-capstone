@@ -25,24 +25,25 @@ class UsersController < ApplicationController
   end
 
   # POST /users or /users.json
-  def create
-    @user = User.create(params.require(:user).permit(:user_name))
-    session[:user_id] = @user.id
-    redirect_to '/welcome'
- end
   # def create
-  #   @user = User.new(user_params)
-
-  #   respond_to do |format|
-  #     if @user.save
-  #       format.html { redirect_to @user, notice: "User was successfully created." }
-  #       format.json { render :show, status: :created, location: @user }
-  #     else
-  #       format.html { render :new, status: :unprocessable_entity }
-  #       format.json { render json: @user.errors, status: :unprocessable_entity }
-  #     end
-  #   end
+  #   @user = User.create(params.require(:user).permit(:user_name))
+  #   session[:user_id] = @user.id
+  #   redirect_to '/articles/new'
   # end
+  def create
+     @user = User.create(params.require(:user).permit(:user_name))
+
+    respond_to do |format|
+      if @user.save
+        session[:user_id] = @user.id
+        format.html { redirect_to '/welcome', notice: "User was successfully created." }
+        format.json { render :show, status: :created, location: @user }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
