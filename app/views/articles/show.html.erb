@@ -1,0 +1,16 @@
+<div style="background-color: white; height: 100%px; z-index: 1;">
+  <p id="notice"><%= notice %></p>
+  <%= display_image %>
+
+  <p style="z-index: 2;">
+    <strong style="z-index: 2; color: orange;">Title:</strong><br>
+    <span ><%= @article.title %></span>
+  </p>
+
+  <p>
+    <strong style='color: orange;'>Story:</strong><br>
+    <span><%= @article.text %></span>
+  </p>
+
+  <%= render 'form2', vote: @vote %>
+</div>

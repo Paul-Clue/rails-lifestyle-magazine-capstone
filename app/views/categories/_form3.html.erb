@@ -1,0 +1,13 @@
+<% if !Vote.where('(user_id = ? and article_id = ?)', current_user.id, params[:id]).first %>
+  <%= form_with(model: vote) do |form| %>
+    <div class='field'>
+      <%= form.hidden_field :user_id, :value => current_user.id %>
+    </div>
+    <div class='field'>
+     <%= form.hidden_field :article_id, :value => params[:id] %>
+    </div>
+    <div class='actions'>
+      <%= form.submit 'Vote for Article', style: 'color: black;  font-wieght: bold;', class: 'btn btn-info'%>
+    </div>
+  <% end %>
+<%end%>

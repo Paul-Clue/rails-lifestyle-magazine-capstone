@@ -1,0 +1,55 @@
+<div style="width: 100%; height: 100%; background-image: url("#{url_for(@article.image)}");">
+<div class="card  card1 mb-3" style="max-width: 80rem; height: 32rem;">
+  <div class="card-header card-header1 bg-transparent ">WRITE A NEW ARTICLE</div>
+  <%= form_with(model: article) do |form| %>
+    <% if article.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+  
+        <ul>
+          <% article.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="mb-3">
+      <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control'  %>
+    </div>
+  
+    <div class="mb-3">
+      <%= form.label :story, class: 'form-label' %>
+      <%= form.text_area :text, class: 'form-control' %>
+    </div>
+  
+    <div class="mb-3">
+      <%= form.label :Image, class: 'form-label' %>
+      <%= form.file_field :image, class: 'form-control' %>
+    </div>
+  
+    <div class="mb-3">
+    <%= form.hidden_field :user_id, :value => current_user.id %>
+    </div>
+  
+    <div class="mb-3">
+      <%= form.label :category, class: 'form-label' %></br>
+      <%= form.select :category_id, [['tesla', 1], ['ford', 2], ['gm', 3], ['lucid', 4], ['battery', 4]], class: 'form-control' %>
+    </div>
+  
+    <div class="mb-3">
+      <%= form.label :Date, class: 'form-label' %>
+      <%= form.date_select :createdAt, class: 'form-control' %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit class: 'btn btn-info', styel: 'align: center;'%> 
+    </div>
+
+<%end%>
+  
+</div>
+
+
+

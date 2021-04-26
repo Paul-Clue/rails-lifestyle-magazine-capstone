@@ -1,0 +1,12 @@
+<h1>Login</h1>
+<%= form_tag '/login' do %>
+   <div class="mb-3">
+      <%= label_tag :user_name, 'Name', class: 'form-label'%>
+   </div>
+   <div class="mb-3">
+      <%= text_field_tag :user_name, params[:id],  class: 'form-control', :required => true %>
+   </div>
+   <div class="mb-3">
+      <%= submit_tag "Login", class: 'btn btn-info'%>
+   </div>
+<%end%>
