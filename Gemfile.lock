@@ -269,10 +269,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-<<<<<<< HEAD
-=======
   bootstrap-sass (= 2.1)
->>>>>>> feature/project3
   byebug
   capybara
   coffee-rails (~> 4.2)
