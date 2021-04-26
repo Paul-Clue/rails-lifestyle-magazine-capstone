@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
-  validates :title, :presence => true
-  validates :text, :presence => true
+  validates :title, presence: true
+  validates :text, presence: true
   belongs_to :user
   has_one_attached :image
   has_and_belongs_to_many :categories, foreign_key: :article_id
@@ -14,4 +14,3 @@ class Article < ApplicationRecord
   scope :lucid, -> { where('category_id = ?', 4).order(created_at: :desc) }
   scope :battery, -> { where('category_id = ?', 5).order(created_at: :desc) }
 end
-

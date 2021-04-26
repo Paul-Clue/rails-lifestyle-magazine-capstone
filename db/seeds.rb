@@ -11,7 +11,6 @@ connection.execute('ALTER SEQUENCE users_id_seq RESTART WITH 1')
 connection.execute('ALTER SEQUENCE articles_id_seq RESTART WITH 1')
 connection.execute('ALTER SEQUENCE votes_id_seq RESTART WITH 1')
 
-
 User.create(user_name: 'Initial Data')
 
 Category.create(name: 'Tesla', priority: 1)
@@ -19,8 +18,6 @@ Category.create(name: 'Ford', priority: 2)
 Category.create(name: 'GM', priority: 3)
 Category.create(name: 'Lucid', priority: 4)
 Category.create(name: 'Battery', priority: 5)
-
-
 
 art = Article.create(title: 'Tesla Article', text: 'Some News about Tesla', user_id: 1, category_id: 1)
 art.image.attach(io: File.open('C:/Users/paulc/Downloads/tesla-pic.jpg'), filename: 'tesla-pic.jpg')
@@ -38,4 +35,3 @@ art = Article.create(title: 'Battery Article', text: 'Some News about Car Batter
 art.image.attach(io: File.open('C:/Users/paulc/Downloads/tesla-pic.jpg'), filename: 'tesla-pic.jpg')
 
 Vote.create(user_id: 1, article_id: 1)
-
