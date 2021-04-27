@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Microverse-blueviolet">
+</p>
+
 #  Microverse Ruby On Rails Life Style Magazine Capstone
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
@@ -15,7 +19,7 @@
 
 ## App Screenshot
 
-![Screenshot](https://github.com/Paul-Clue/rails-lifestyle-magazine-capstone/public/Screenshot(15).png)
+<img src="./Screenshot(15).png">
 
 ## Getting Started
 
