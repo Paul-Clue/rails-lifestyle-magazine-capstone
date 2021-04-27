@@ -7,19 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 art = Article.create(title: 'Tesla Article', text: 'Some News about Tesla', user_id: 1, category_id: 1)
-art.image.attach(io: File.open('/capstone-logo1.png'), filename: 'capstone-logo1.png')
+art.image.attach(io: File.open('/public/capstone-logo1.png'), filename: 'capstone-logo1.png')
 
 art = Article.create(title: 'Ford Article', text: 'Some News about Ford', user_id: 1, category_id: 2)
-art.image.attach(io: File.open('/capstone-logo1.png'), filename: 'capstone-logo1.png')
+art.image.attach(io: File.open('/public/capstone-logo1.png'), filename: 'capstone-logo1.png')
 
 art = Article.create(title: 'GM Article', text: 'Some News about Gm', user_id: 1, category_id: 3)
-art.image.attach(io: File.open('/capstone-logo1.png'), filename: 'capstone-logo1.png')
+art.image.attach(io: File.open('/public/capstone-logo1.png'), filename: 'capstone-logo1.png')
 
 art = Article.create(title: 'Lucid Article', text: 'Some News about Lucid', user_id: 1, category_id: 4)
-art.image.attach(io: File.open('/capstone-logo1.png'), filename: 'capstone-logo1.png')
+art.image.attach(io: File.open('/public/capstone-logo1.png'), filename: 'capstone-logo1.png')
 
 art = Article.create(title: 'Battery Article', text: 'Some News about Car Batteries', user_id: 1, category_id: 5)
-art.image.attach(io: File.open('/capstone-logo1.png'), filename: 'capstone-logo1.png')
+art.image.attach(io: File.open('/public/capstone-logo1.png'), filename: 'capstone-logo1.png')
 
 connection = ActiveRecord::Base.connection()
 connection.execute('ALTER SEQUENCE categories_id_seq RESTART WITH 1')
