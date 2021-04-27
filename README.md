@@ -19,7 +19,7 @@
 
 ## App Screenshot
 
-<img src="./Screenshot(15).png">
+<img src="/public/Screenshot(15).png">
 
 ## Getting Started
 
