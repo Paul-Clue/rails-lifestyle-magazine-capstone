@@ -10,6 +10,12 @@
 
 [Microverse Ruby On Rails Life Style Magazine Capstone](https://fathomless-chamber-99574.herokuapp.com/)
 
+## Video Link
+[Link To Video Presentation of the App](https://www.loom.com/share/0334ac6ae6d74093be6a031b66f0dceb)
+
+## App Screenshot
+
+![Screenshot](Screenshot(15).png)
 
 ## Getting Started
 
