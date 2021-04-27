@@ -15,7 +15,7 @@
 
 ## App Screenshot
 
-![Screenshot](Screenshot(15).png)
+![Screenshot](https://github.com/Paul-Clue/rails-lifestyle-magazine-capstone/public/Screenshot(15).png)
 
 ## Getting Started
 
