@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-[Microverse Ruby On Rails Life Style Magazine Capstone](https://fierce-sands-66564.herokuapp.com/users/sign_in)
+[Microverse Ruby On Rails Life Style Magazine Capstone](https://fathomless-chamber-99574.herokuapp.com/)
 
 
 ## Getting Started
@@ -34,7 +34,6 @@ Setup database with:
 ```
    rails db:create
    rails db:migrate
-   rails db:schema:load
    rails db:seed
 ```
 
