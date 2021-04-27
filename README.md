@@ -23,8 +23,7 @@
 
 ## Getting Started
 
-To get the app up and going locally follow these simple steps.
-
+Follow these simple steps to get the app working.
 ### Prerequisites
 
 Ruby: 2.6.3
