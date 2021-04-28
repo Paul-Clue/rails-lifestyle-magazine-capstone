@@ -20,7 +20,7 @@ Category.create(name: 'Lucid', priority: 4)
 Category.create(name: 'Battery', priority: 5)
 
 Article.create(title: 'Tesla Article', text: 'Some News about Tesla', 
-image: "https://images.pexels.com/photos/2526127/pexels-photo-2526127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+image: "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
 user_id: 1, category_id: 1)
 
 Article.create(title: 'Ford Article', text: 'Some News about Ford',
