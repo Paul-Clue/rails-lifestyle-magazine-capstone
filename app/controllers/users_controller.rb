@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  validates :user_name, presence: true
   before_action :set_user, only: %i[show edit update destroy]
   skip_before_action :authorized, only: %i[new create]
 

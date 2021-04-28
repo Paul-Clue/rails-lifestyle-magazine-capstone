@@ -15,7 +15,7 @@
 [Microverse Ruby On Rails Life Style Magazine Capstone](https://enigmatic-reef-79619.herokuapp.com/)
 
 ## Video Link
-[Link To Video Presentation of the App](https://www.loom.com/share/0334ac6ae6d74093be6a031b66f0dceb)
+[Link To Video Presentation of the App](https://www.loom.com/share/e6bfa670c057452ab8db14bd2432e551)
 
 ## App Screenshot
 
