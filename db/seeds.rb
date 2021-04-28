@@ -19,19 +19,25 @@ Category.create(name: 'GM', priority: 3)
 Category.create(name: 'Lucid', priority: 4)
 Category.create(name: 'Battery', priority: 5)
 
-art = Article.create(title: 'Tesla Article', text: 'Some News about Tesla', user_id: 1, category_id: 1)
-art.image.attach(io: File.open('C:/Users/paulc/Downloads/tesla-pic.jpg'), filename: 'tesla-pic.jpg')
+Article.create(title: 'Tesla Article', text: 'Some News about Tesla', 
+image: "https://images.pexels.com/photos/2526127/pexels-photo-2526127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+user_id: 1, category_id: 1)
 
-art = Article.create(title: 'Ford Article', text: 'Some News about Ford', user_id: 1, category_id: 2)
-art.image.attach(io: File.open('C:/Users/paulc/Downloads/ford-pic.png'), filename: 'ford-pic.png')
+Article.create(title: 'Ford Article', text: 'Some News about Ford',
+ image: "https://images.pexels.com/photos/3757231/pexels-photo-3757231.png?auto=compress&cs=tinysrgb&dpr=1&w=500", 
+user_id: 1, category_id: 2)
 
-art = Article.create(title: 'GM Article', text: 'Some News about Gm', user_id: 1, category_id: 3)
-art.image.attach(io: File.open('C:/Users/paulc/Downloads/gm-pic.png'), filename: 'gm-pic.png')
 
-art = Article.create(title: 'Lucid Article', text: 'Some News about Lucid', user_id: 1, category_id: 4)
-art.image.attach(io: File.open('C:/Users/paulc/Downloads/lucid-pic.jpg'), filename: 'lucid-pic.jpg')
+ Article.create(title: 'GM Article', text: 'Some News about Gm', 
+ image: "https://images.pexels.com/photos/5214413/pexels-photo-5214413.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+ user_id: 1, category_id: 3)
 
-art = Article.create(title: 'Battery Article', text: 'Some News about Car Batteries', user_id: 1, category_id: 5)
-art.image.attach(io: File.open('C:/Users/paulc/Downloads/tesla-pic.jpg'), filename: 'tesla-pic.jpg')
+ Article.create(title: 'Lucid Article', text: 'Some News about Lucid', 
+ image: "https://images.pexels.com/photos/4143686/pexels-photo-4143686.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", 
+ user_id: 1, category_id: 4)
+
+Article.create(title: 'Battery Article', text: 'Some News about Car Batteries', 
+image: "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", 
+user_id: 1, category_id: 5)
 
 Vote.create(user_id: 1, article_id: 1)

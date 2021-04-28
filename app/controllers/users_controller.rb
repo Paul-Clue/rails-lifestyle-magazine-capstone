@@ -23,11 +23,6 @@ class UsersController < ApplicationController
   def edit; end
 
   # POST /users or /users.json
-  # def create
-  #   @user = User.create(params.require(:user).permit(:user_name))
-  #   session[:user_id] = @user.id
-  #   redirect_to '/articles/new'
-  # end
   def create
     @user = User.create(params.require(:user).permit(:user_name))
 

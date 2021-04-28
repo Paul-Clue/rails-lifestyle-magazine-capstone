@@ -13,6 +13,17 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def welcome
+
+    @recent_tesla_article = Article.all.tesla.first
+    @recent_ford_article = Article.all.ford.first
+    @recent_gm_article = Article.all.gm.first
+    @recent_lucid_article = Article.all.lucid.first
+    @most_popular_article2 = Article.most_pop
+    
+    @art = Article.all
+  end
+
   # GET /articles/1/edit
   def edit
     @article.image.attach(params[:image])
@@ -20,25 +31,8 @@ class ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
-    unless Category.exists?
-      @tes = Category.create(name: 'tesla', priority: 1)
-      @for = Category.create(name: 'ford', priority: 2)
-      @gem = Category.create(name: 'gm', priority: 3)
-      @luc = Category.create(name: 'lucid', priority: 4)
-      @bat = Category.create(name: 'battery', priority: 5)
-    end
     @article = Article.new(article_params)
     @article2 = Article.all
-
-    # if @article2.length.between?(1, 15)
-    #   @most_popular_article2 = Article.create(:title => 'Tesla', :text => "Tesla news", :image => params[:image], :user_id => current_user.id, :category_id => 1)
-    #   @recent_tesla_article = Article.create(:title => 'Tesla', :text => "Tesla news", :image => params[:image], :user_id => current_user.id, :category_id => 1)
-    #   @recent_ford_article = Article.create(:title => 'Ford', :text => "Ford news", :image =>  params[:image], :user_id => current_user.id, :category_id => 2)
-    #   @recent_gm_article = Article.create(:title => 'GM', :text => "GM news", :image =>  params[:image], :user_id => current_user.id, :category_id => 3)
-    #   @recent_lucid_article = Article.create(:title => 'Lucid', :text => "Lucid news", :image =>  params[:image], :user_id => current_user.id, :category_id => 4)
-    #   @recent_battery_article = Article.create(:title => 'Battery-Tech', :text => "Battery news", :image => params[:image], :user_id => current_user.id, :category_id => 5)
-    #   @articles = Article.all
-    # end
 
     respond_to do |format|
       if @article.save

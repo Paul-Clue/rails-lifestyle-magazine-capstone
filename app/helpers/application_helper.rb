@@ -12,7 +12,6 @@ module ApplicationHelper
       @str += " <li class='nav-item'>"
       @str += "  #{link_to('LogOut', '/logout', method: :get, style: 'color: grey; text-decoration: none;')}"
       @str += '</li>'
-      @str.html_safe
     else
       @str += "<li class='nav-item'>"
       @str += "  <span style='color: grey; font-size: 18px; font-weight: bold;'>Login or Sign Up:<span>"
@@ -23,7 +22,7 @@ module ApplicationHelper
       @str += "<li class='nav-item'>"
       @str += "  #{link_to('Sign Up', '/users/new', method: :get, style: 'color: navy; text-decoration: none;')}"
       @str += '</li>'
-      @str.html_safe
     end
+    @str.html_safe
   end
 end

@@ -34,7 +34,4 @@ class VoteController < ApplicationController
   end
 
   # Only allow a list of trusted parameters through.
-  def vote_params
-    params.permit(:user_id, :article_id)
-  end
 end

@@ -25,9 +25,4 @@ module SessionsHelper
     end
     @str.html_safe
   end
-
-  def pic
-    @pic = ''
-    @pic += "<div style='background-image: url(#{url_for(@articles.first.image)})';>"
-  end
 end
