@@ -13,6 +13,6 @@ class CategoriesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_category
-    @categpry = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 end

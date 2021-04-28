@@ -23,16 +23,16 @@ module SessionsHelper
                                                                  class: 'css_class'}"
       @str += '</li>'
       @str += "<li class='nav-item'>"
-      @str += link_to 'Tesla', category_path(tes_id), style: 'color: grey; text-decoration: none;'.to_s
+      @str += link_to 'Tesla', category_path(tes_id.category_id), style: 'color: grey; text-decoration: none;'.to_s
       @str += '</li>'
       @str += "<li class='nav-item'>"
-      @str += link_to 'Ford', category_path(for_id), style: 'color: grey; text-decoration: none;'.to_s
+      @str += link_to 'Ford', category_path(for_id.category_id), style: 'color: grey; text-decoration: none;'.to_s
       @str += '</li>'
       @str += "<li class='nav-item'>"
-      @str += link_to 'GM', category_path(gm_id), style: 'color: grey; text-decoration: none;'.to_s
+      @str += link_to 'GM', category_path(gm_id.category_id), style: 'color: grey; text-decoration: none;'.to_s
       @str += '</li>'
       @str += "<li class='nav-item'>"
-      @str += link_to 'Lucid', category_path(luc_id), style: 'color: grey; text-decoration: none;'.to_s
+      @str += link_to 'Lucid', category_path(luc_id.category_id), style: 'color: grey; text-decoration: none;'.to_s
       @str += '</li>'
       @str += '&nbsp;'
       @str += '&nbsp;'
