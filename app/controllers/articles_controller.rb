@@ -14,13 +14,12 @@ class ArticlesController < ApplicationController
   end
 
   def welcome
-
     @recent_tesla_article = Article.all.tesla.first
     @recent_ford_article = Article.all.ford.first
     @recent_gm_article = Article.all.gm.first
     @recent_lucid_article = Article.all.lucid.first
     @most_popular_article2 = Article.most_pop
-    
+
     @art = Article.all
   end
 

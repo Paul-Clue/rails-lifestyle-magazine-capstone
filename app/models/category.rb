@@ -5,9 +5,8 @@ class Category < ApplicationRecord
     @cat_id = Article.find(param).category_id
     @art = Article.where('(category_id = ?)', @cat_id)
 
-    return @art
+    @art
   end
 
-
-  scope :most_popular_article2, -> {where('(id = ?)', @most_popular_article).first}
+  scope :most_popular_article2, -> { where('(id = ?)', @most_popular_article).first }
 end

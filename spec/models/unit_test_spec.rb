@@ -33,22 +33,22 @@ RSpec.describe Category, type: :model do
   end
 end
 
-
 RSpec.describe Vote, type: :model do
-    it 'checks if a vote gets created' do
-    use =  User.create(user_name: 'Benny')
-    cat =  Category.create(name: 'tesla', priority: 1)
-    art =  Article.create(title: 'GM Article', text: 'Some News about Gm', image: 'pic', user_id: use.id, category_id: cat.id)
-      Vote.create(user_id: use.id, article_id: art.id)
-      expect(Vote.count).to eq 1
-    end
+  it 'checks if a vote gets created' do
+    use = User.create(user_name: 'Benny')
+    cat = Category.create(name: 'tesla', priority: 1)
+    art = Article.create(title: 'GM Article', text: 'Some News about Gm', image: 'pic', user_id: use.id,
+                         category_id: cat.id)
+    Vote.create(user_id: use.id, article_id: art.id)
+    expect(Vote.count).to eq 1
+  end
 end
 
 RSpec.describe Article, type: :model do
   it 'checks for the creation of an article' do
-   use = User.create(user_name: 'Benny')
-   cat =  Category.create(name: 'tesla', priority: 1)
-     Article.create(title: 'GM Article', text: 'Some News about Gm', image: 'pic', user_id: use.id, category_id: cat.id)
+    use = User.create(user_name: 'Benny')
+    cat = Category.create(name: 'tesla', priority: 1)
+    Article.create(title: 'GM Article', text: 'Some News about Gm', image: 'pic', user_id: use.id, category_id: cat.id)
     expect(Article.count).to eq 1
   end
 end

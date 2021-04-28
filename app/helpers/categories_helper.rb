@@ -8,11 +8,9 @@ module CategoriesHelper
     @user2.html_safe
   end
 
-  def form2_0(vto, id)
-    if !Vote.where('(user_id = ? and article_id = ?)', current_user.id, id).first
-      render partial: "form3", locals: { vto: vto, id: id }
-    end
-     
+  def form2_p(vto, id)
+    return if Vote.where('(user_id = ? and article_id = ?)', current_user.id, id).first
+
+    render partial: 'form3', locals: { vto: vto, id: id }
   end
 end
-
