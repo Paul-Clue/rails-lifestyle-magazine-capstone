@@ -24,11 +24,11 @@
     </button>
     <div class="collapse justify-content-center navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <%= logout_button  %>
+          <%= logout_button(@recent_tesla_article.category_id, @recent_ford_article.category_id, @recent_gm_article.category_id, @recent_lucid_article.category_id)  %>
       </ul>
       </div>
       <form class="d-flex ">
-        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+        
         <button class="btn btn2" type="submit"><i class="material-icons">search</i></button>
       </form>
     
