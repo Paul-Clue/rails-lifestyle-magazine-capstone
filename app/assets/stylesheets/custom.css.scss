@@ -180,14 +180,18 @@ li{
 
 /* The animation code */
 @keyframes example {
-  from {color: white; font-size: 70px;}
-  to {color: green; font-size: 100px;}
+  from {color: white; font-size: 70px; left: 200px;}
+  to {color: green; font-size: 300px; left: 400px;}
 }
 
 /* The element to apply the animation to */
 .notice2{
   width: 100px;
   height: 100px;
+  position: absolute;
+  color: rgba(300, 300, 300, .1);
+  z-index: 10;
+  top: 2px;
   animation-name: example;
-  animation-duration: 1s;
+  animation-duration: 3s;
 }
