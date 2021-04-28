@@ -1,5 +1,16 @@
 module ApplicationHelper
-  def logout_button(tes_id, for_id, gm_id, luc_id)
+  def logout_button
+    @recent_tesla_article = Article.all.tesla.first
+    @recent_ford_article = Article.all.ford.first
+    @recent_gm_article = Article.all.gm.first
+    @recent_lucid_article = Article.all.lucid.first
+    @most_popular_article2 = Article.most_pop
+
+    tes_id = @recent_tesla_article
+    for_id = @recent_ford_article 
+    gm_id = @recent_gm_article
+    luc_id = @recent_lucid_article
+    pop = @most_popular_article2
     @str = ''
     if logged_in?
       @str += "<li class='nav-item'>"
