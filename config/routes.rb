@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :articles
-  resources :categories
+  resources :articles, only: %i[new show create edit destroy]
+  resources :categories, only: %i[new show]
   root to: 'users#new'
   resources :users, only: %i[new create]
   get 'login', to: 'sessions#new'
