@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Microverse Ruby On Rails Life Style Magazine Capstone](https://enigmatic-reef-79619.herokuapp.com/)
+[Microverse Ruby On Rails Life Style Magazine Capstone](https://fierce-escarpment-23374.herokuapp.com/)
 
 ## Video Link
 [Link To Video Presentation of the App](https://www.loom.com/share/e6bfa670c057452ab8db14bd2432e551)
