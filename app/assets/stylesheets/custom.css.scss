@@ -185,6 +185,7 @@ li {
 /* The animation code */
 @keyframes example {
   from {
+    visibility: visible;
     color: white;
     font-size: 70px;
     left: 200px;
@@ -194,6 +195,7 @@ li {
     color: green;
     font-size: 300px;
     left: 400px;
+    visibility: hidden;
   }
 }
 
@@ -201,6 +203,7 @@ li {
 .notice2 {
   width: 100px;
   height: 100px;
+  visibility: hidden;
   position: absolute;
   color: rgba(300, 300, 300, 0.1);
   z-index: 10;

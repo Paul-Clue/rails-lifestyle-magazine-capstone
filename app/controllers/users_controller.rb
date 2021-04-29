@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+  include ActiveModel::Validations
   before_action :set_user, only: %i[show edit update destroy]
   skip_before_action :authorized, only: %i[new create]
-  # validates :user_name, presence: true
+  validates :user_name, presence: true
 
   def index
     @users = User.all
