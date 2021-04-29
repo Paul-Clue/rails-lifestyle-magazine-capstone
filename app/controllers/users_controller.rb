@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   skip_before_action :authorized, only: %i[new create]
   # validates :user_name, presence: true
 
- 
   def index
     @users = User.all
     @user = User.new
@@ -13,17 +12,13 @@ class UsersController < ApplicationController
     @user_articles = Article.where(user_id: current_user.id)
   end
 
- 
   def show; end
-
 
   def new
     @user = User.new
   end
 
-  
   def edit; end
-
 
   def create
     @user = User.create(params.require(:user).permit(:user_name))
@@ -40,7 +35,6 @@ class UsersController < ApplicationController
     end
   end
 
-  
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -53,7 +47,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   def destroy
     @user.destroy
     respond_to do |format|
@@ -64,12 +57,10 @@ class UsersController < ApplicationController
 
   private
 
-  
   def set_user
     @user = User.find(params[:id])
   end
 
-  
   def user_params
     params.require(:user).permit(:user_name)
   end
