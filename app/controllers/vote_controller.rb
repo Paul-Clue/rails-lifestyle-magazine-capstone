@@ -14,8 +14,7 @@ class VoteController < ApplicationController
       end
     end
   end
-
-  # PATCH/PUT /articles/1 or /articles/1.json
+ # PATCH/PUT /articles/1 or /articles/1.json
 
   # DELETE /articles/1 or /articles/1.json
   def destroy
