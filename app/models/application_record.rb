@@ -8,7 +8,7 @@ class ApplicationRecord < ActiveRecord::Base
       @arr << vote.article.id
     end
     @pop = @arr.max_by { |i| @arr.count(i) }
-    @most_popular_article2 = Article.includes(:vote).where('(id = ?)', @pop).first
+    @most_popular_article2 = Article.where('(id = ?)', @pop).first
     @most_popular_article2
   end
 
