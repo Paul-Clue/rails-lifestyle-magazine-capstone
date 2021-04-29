@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :articles, only: %i[new show create edit destroy]
   resources :categories, only: %i[new show]
-  root to: 'users#new'
+  root to: 'users#index'
   resources :users, only: %i[new create]
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

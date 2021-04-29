@@ -1,27 +1,23 @@
 
-
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.user_name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1 style="color: white; text-align: center;">Sign Up</h1>
+<%= form_for @user do |f|%>
+  <div class="mb-3">
+    <%= f.label :Name, class: 'form-label', style: 'color: white; font-weight: bold;'%><br>
+    <%= f.text_field :user_name, class: 'form-control', :required => true%><br>
+  </div>
+  <%= f.submit class: 'btn btn-info' %>
+<%end%>
 <br>
-
-<%= link_to 'New User', new_user_path %>
+<br>
+<h1 style="color: white; text-align: center;">Login</h1>
+<%= form_tag '/login' do %>
+   <div class="mb-3">
+      <%= label_tag :user_name, 'Name', class: 'form-label'%>
+   </div>
+   <div class="mb-3">
+      <%= text_field_tag :user_name, params[:id],  class: 'form-control', :required => true %>
+   </div>
+   <div class="mb-3">
+      <%= submit_tag "Login", class: 'btn btn-info'%>
+   </div>
+<%end%>
