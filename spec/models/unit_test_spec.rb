@@ -52,37 +52,3 @@ RSpec.describe Article, type: :model do
     expect(Article.count).to eq 1
   end
 end
-# RSpec.describe 'Sign in test', type: :feature do
-#   it 'checks that a new account can be made successfully' do
-#     visit root_path
-#     within('.new_user') do
-#       fill_in 'user_user_name', with: 'Chris'
-#     end
-#     click_button 'Create User'
-#     expect(User.count).to eq 2
-#   end
-# end
-
-# RSpec.describe 'Sign in test', type: :feature do
-#   it 'checks that a new account holer can sign back in successfully' do
-#     visit new_user_path
-#     within('.new_user') do
-#       fill_in 'user_user_name', with: 'Chris'
-#     end
-#     click_button 'Create User'
-#     expect(User.count).to eq 1
-
-#     visit root_path
-#     within('.nav') do
-#       click_link 'Sign out'
-#     end
-
-#     visit new_user_session_path
-#     within('.new_user') do
-#       fill_in 'Email', with: 'carlos@gmail.com'
-#       fill_in 'Password', with: '123456'
-#     end
-#     click_button 'Log in'
-#     expect(current_path).to eq('/')
-#   end
-# end
