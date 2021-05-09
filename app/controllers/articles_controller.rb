@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def index
+  def welcome
     @recent_tesla_article = Article.all.tesla.first
     @recent_ford_article = Article.all.ford.first
     @recent_gm_article = Article.all.gm.first

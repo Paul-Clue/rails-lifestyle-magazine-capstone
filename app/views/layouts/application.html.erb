@@ -37,7 +37,12 @@
 <div class="under_nav"></div>
 
 
-
+    <% if notice %>
+      <p class="alert alert-success" style="position: absolute; width: 100%; text-align: center;"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger" style="position: absolute; width: 100%; text-align: center;"><%= alert %></p>
+    <% end %>
     <div class="container">
       <%= yield %>
     </div>

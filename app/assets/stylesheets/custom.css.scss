@@ -185,22 +185,26 @@ li {
 /* The animation code */
 @keyframes example {
   from {
+    height: 50px;
+    top: 100px;
     visibility: visible;
-    color: white;
-    font-size: 70px;
-    left: 200px;
+    color: black;
+    font-size: 15px;
+    left: 0;
   }
 
   to {
-    color: green;
-    font-size: 300px;
-    left: 400px;
+    height: 50px;
+    top: 100px;
+    color: black;
+    font-size: 15px;
+    left: 0;
     visibility: hidden;
   }
 }
 
 /* The element to apply the animation to */
-.notice2 {
+.alert {
   width: 100px;
   height: 100px;
   visibility: hidden;
@@ -210,4 +214,11 @@ li {
   top: 2px;
   animation-name: example;
   animation-duration: 3s;
+}
+
+.big-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
 }

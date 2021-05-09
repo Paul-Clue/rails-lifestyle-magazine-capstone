@@ -3,7 +3,7 @@
 </p>
 
 #  Microverse Ruby On Rails Life Style Magazine Capstone
-> For this project, I built an entire app from scratch with Ruby on Rails. The app is based off of a life style artile website. The theme of the site is electric cars. The app allows users to create accounts, login, create articles, and vote cast votes for specific articles. The Article with the most votes becomes the featured article and with full-width image and title in the first row of the page. The second row of the page displays the most recent articles written for a particular category.
+> For this project, I built an entire app from scratch with Ruby on Rails. The app is based off of a life style article website. The theme of the site is electric cars. The app allows users to create accounts, login, create small articles, and cast votes for specific articles. The Article with the most votes becomes the featured article with full-width image and title in the first row of the page. The second row of the page displays the most recent articles written for a particular category.
 
 ## Built With
 
