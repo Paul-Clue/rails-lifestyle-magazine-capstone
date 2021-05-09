@@ -55,6 +55,7 @@ Start server with:
 ```
 
 Open `http://localhost:3000/` in your browser.
+When creating and article, please input a valid url for an image. 
 
 ### Run tests
 

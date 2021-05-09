@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
-  def index; end
 
   def show; end
 
@@ -8,7 +7,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def welcome
+  def index
     @recent_tesla_article = Article.all.tesla.first
     @recent_ford_article = Article.all.ford.first
     @recent_gm_article = Article.all.gm.first
