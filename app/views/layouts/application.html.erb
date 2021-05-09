@@ -6,11 +6,73 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+
+  <body class=" bg-dark">
+  
+  <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="/capstone-logo1.png" class="img" width="110px"> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse justify-content-center navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <%= logout_button  %>
+      </ul>
+      </div>
+      <form class="d-flex ">
+        
+        <button class="btn btn2" type="submit"><i class="material-icons">search</i></button>
+      </form>
+    
+  </div>
+</nav>
+<div class="under_nav"></div>
+
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+    
+    <!-- Footer -->
+<footer class="footer bg-dark text-white">
+  <!-- Grid container -->
+  <div class="grid-container bg-dark" style=" height: 50px;">
+    <div class="grid-item img foot-img"><img src="/capstone-logo1.png"  width="80px"></div>
+
+    <div class="grid-item copy">
+    
+      © 2020 Copyright:
+      <a class="text-white" href="#">P.Clue</a>
+      </div>
+
+    <div class="grid-item soc" >
+      <a class="btn  btn-floating m-1" href="#!" role="button"
+        ><span style="color: white;">Contact Us:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-facebook"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn  btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-twitter" style="font-size:20px;"></i></a>
+      <!-- Google -->
+      <a class="btn  btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-instagram"></i></a>
+      </div>
+    <!-- Section: Social media -->
+
+    
+    <!-- Copyright -->
+  
+  </div>
+</footer>
+
+
   </body>
 </html>

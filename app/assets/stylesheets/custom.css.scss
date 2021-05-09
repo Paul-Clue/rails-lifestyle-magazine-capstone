@@ -1,0 +1,213 @@
+//form new article page styling
+body {
+  overflow-x: hidden;
+}
+
+.card1 {
+  border: 5px solid white;
+}
+
+.card-header1 {
+  border-bottom: 5px solid royalblue;
+  text-align: center;
+  color: royalblue;
+  font-weight: bold;
+}
+
+//welcome page
+.main_img_div {
+  position: absolute;
+  left: 2px;
+  top: 104px;
+  z-index: 0;
+  height: 56%;
+  width: 100%;
+}
+
+.ctg-img_1 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.art_link {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+//form new application page styling
+
+nav {
+  background-color: white;
+}
+
+.img {
+  margin-left: 50px;
+}
+
+.under_nav {
+  background-image: linear-gradient(to right, red 15%, gray 10%, rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 5px;
+}
+
+i {
+  color: orange;
+}
+
+li {
+  padding-right: 15px;
+}
+
+.material-icons {
+  position: absolute;
+  right: 110px;
+  top: 45px;
+  color: black;
+  font-weight: bold;
+}
+
+.btn2 {
+  width: 200px;
+}
+
+.copy {
+  margin-right: -50%;
+}
+
+.foot-img {
+  margin-left: -40%;
+}
+
+.soc {
+  margin-right: -80%;
+}
+
+.footer {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 720px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+// Welcome page
+.grid-container {
+  width: 100%;
+  height: 24%;
+  left: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #2196f3;
+  padding: 0;
+}
+
+.g2 {
+  grid-template-columns: auto auto;
+}
+
+.g3 {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+}
+
+.grid-item {
+  // background-color: rgba(255, 255, 255, 0.8);
+  padding: 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.welcome_text {
+  position: absolute;
+  bottom: -230px;
+  color: blanchedalmond;
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 2;
+  width: 200px;
+  height: 20px;
+}
+
+// Categories page
+
+.cat_grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgba(300, 300, 300, 0.9);
+  grid-gap: 0 0;
+  padding: 0;
+}
+
+.cat_title {
+  color: darkslategray;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 5;
+}
+
+.cat_text {
+  color: darkslategray;
+  width: 220px;
+  height: 150px;
+  z-index: 5;
+}
+
+.cat_auth_name {
+  color: darkslategray;
+}
+
+.item1 {
+  /* stylelint-disable */
+  grid-column: 1 / 1.5;
+ /* stylelint-enable */
+  background-color: white;
+  border-bottom: 1px solid darkslategray;
+  height: 315px;
+}
+
+.item2 {
+  /* stylelint-disable */
+  grid-column: 1 / 1.5;
+ /* stylelint-enable */
+  height: 315px;
+}
+
+/* The animation code */
+@keyframes example {
+  from {
+    visibility: visible;
+    color: white;
+    font-size: 70px;
+    left: 200px;
+  }
+
+  to {
+    color: green;
+    font-size: 300px;
+    left: 400px;
+    visibility: hidden;
+  }
+}
+
+/* The element to apply the animation to */
+.notice2 {
+  width: 100px;
+  height: 100px;
+  visibility: hidden;
+  position: absolute;
+  color: rgba(300, 300, 300, 0.1);
+  z-index: 10;
+  top: 2px;
+  animation-name: example;
+  animation-duration: 3s;
+}

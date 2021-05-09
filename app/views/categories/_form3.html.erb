@@ -1,0 +1,13 @@
+
+
+  <%=form_with(model: vto) do |form|%>
+     <div class='field'>
+      <%= form.hidden_field :user_id, :value => current_user.id %>
+     </div>
+     <div class='field'>
+      <%= form.hidden_field :article_id, :value => id%>
+     </div>
+     <div class='actions'>
+       <%=form.submit 'Vote for Article', style: 'color: black; font-wieght: bold;', class: 'btn btn-info'%>
+     </div>
+  <%end%>
