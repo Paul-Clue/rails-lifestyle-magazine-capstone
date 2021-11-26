@@ -1,35 +1,44 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+      <div class="notice" style="text-align: center;" ><span class="notice2"> WELCOME</span></div>
+      <div class="main_img_div"><img src=<%=@most_popular_article2.image%> class='ctg-image ctg-img_1'></div>
+      <p style="color: orange; z-index: 2; position: absolute; bottom: 300px;"><%= link_to @most_popular_article2.title, category_path(@most_popular_article2.category_id),  style: 'z-index: 2; position: absolute; color: orange; left: -90px; text-decoration: none;' %></a></p>
+      <p style="color: white; z-index: 2; position: absolute; bottom: 250px; left: 20px;"><%= @most_popular_article2.text %></p>
+      </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Story</th>
-      <th>Image</th>
-      <th>User</th>
-      <th>Date created</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= article.image %></td>
-        <td><%= article.user_id %></td>
-        <td><%= article.category_id %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+      <div class="grid-container g3">
+        <div class="grid-item">
+        <span style="z-index: 2; position: absolute; color: white; left: 20px; border-bottom: 3px solid yellow;">
+        <%= link_to @recent_tesla_article.title, category_path(@recent_tesla_article.category_id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_tesla_article.text %></p>
+        <img src=<%=@recent_tesla_article.image%> style=' height: 100%; width: 100%; object-fit: cover;' class='ctg-image'>
+        </div>
 
-<%= link_to 'New Article', new_article_path %>
+        <div class="grid-item">
+        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid yellow; text-decoraiton: none">
+        <%= link_to @recent_ford_article.title, category_path(@recent_ford_article.category_id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_ford_article.text %></p>
+        <img src=<%=@recent_ford_article.image%> style=' height: 100%; width: 100%; object-fit: cover;' class='ctg-image'>
+        </div>
+
+        <div class="grid-item">
+        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid yellow; text-decoraiton: none">
+        <%= link_to @recent_gm_article.title, category_path(@recent_gm_article.category_id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_gm_article.text%></p>
+        <img src=<%=@recent_gm_article.image%> style=' height: 100%; width: 100%; object-fit: cover;' class= 'ctg-image'>
+        </div>
+
+        <div class="grid-item">
+        <span style="z-index: 2; position: absolute; color: white;  border-bottom: 3px solid yellow; text-decoraiton: none">
+        <%= link_to @recent_lucid_article.title, category_path(@recent_lucid_article.category_id), class: 'art_link' %></span>
+        <p class="welcome_text">
+        <%= @recent_lucid_article.text%></p>
+        <img src=<%=@recent_lucid_article.image%> style=' height: 100%; width: 100%; object-fit: cover;' class='ctg-image'>
+        </div>
+</div>
+
+

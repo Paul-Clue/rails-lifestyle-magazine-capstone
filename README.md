@@ -3,7 +3,7 @@
 </p>
 
 #  Microverse Ruby On Rails Life Style Magazine Capstone
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> The app is based off of a life style article website. The theme of the site is electric cars. The app allows users to create accounts, login, create small articles, and cast votes for specific articles. The Article with the most votes becomes the featured article with full-width image and title in the first row of the page. The second row of the page displays the most recent articles written for a particular category.
 
 ## Built With
 
@@ -12,10 +12,7 @@
 
 ## Live Demo
 
-[Microverse Ruby On Rails Life Style Magazine Capstone](https://fathomless-chamber-99574.herokuapp.com/)
-
-## Video Link
-[Link To Video Presentation of the App](https://www.loom.com/share/0334ac6ae6d74093be6a031b66f0dceb)
+[Microverse Ruby On Rails Life Style Magazine Capstone](https://salty-sea-17849.herokuapp.com/)
 
 ## App Screenshot
 
@@ -23,8 +20,7 @@
 
 ## Getting Started
 
-To get the app up and going locally follow these simple steps.
-
+Follow these simple steps to get the app working.
 ### Prerequisites
 
 Ruby: 2.6.3
@@ -33,7 +29,7 @@ Postgres: 9.5
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
@@ -56,6 +52,7 @@ Start server with:
 ```
 
 Open `http://localhost:3000/` in your browser.
+When creating and article, please input a valid url for an image. 
 
 ### Run tests
 

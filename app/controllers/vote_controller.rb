@@ -14,7 +14,6 @@ class VoteController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /articles/1 or /articles/1.json
 
   # DELETE /articles/1 or /articles/1.json
@@ -34,7 +33,4 @@ class VoteController < ApplicationController
   end
 
   # Only allow a list of trusted parameters through.
-  def vote_params
-    params.permit(:user_id, :article_id)
-  end
 end

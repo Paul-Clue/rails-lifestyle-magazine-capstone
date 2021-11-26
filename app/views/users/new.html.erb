@@ -1,23 +1,25 @@
 
-<h1 style="color: white; text-align: center;">Sign Up</h1>
-<%= form_for @user do |f|%>
-  <div class="mb-3">
-    <%= f.label :Name, class: 'form-label', style: 'color: white; font-weight: bold;'%><br>
-    <%= f.text_field :user_name, class: 'form-control', :required => true%><br>
-  </div>
-  <%= f.submit class: 'btn btn-info' %>
-<%end%>
-<br>
-<br>
-<h1 style="color: white; text-align: center;">Login</h1>
-<%= form_tag '/login' do %>
+<img src="/capstone-logo1.png" class="big-img" >
+<h3 style="color: white; text-align: center;">Sign Up</h3>
+<div style="width: 500px; margin: auto;">
+   <%= form_for @user do |f|%>
    <div class="mb-3">
-      <%= label_tag :user_name, 'Name', class: 'form-label'%>
+      <%= f.label :Name, class: 'form-label', style: 'color: white; font-weight: bold;'%><br>
+      <%= f.text_field :user_name, class: 'form-control', :required => true%><br>
    </div>
-   <div class="mb-3">
-      <%= text_field_tag :user_name, params[:id],  class: 'form-control', :required => true %>
-   </div>
-   <div class="mb-3">
-      <%= submit_tag "Login", class: 'btn btn-info'%>
-   </div>
-<%end%>
+   <%= f.submit class: 'btn btn-info' %>
+   <%end%>
+
+   <h3 style="color: white; text-align: center;">Login</h3>
+   <%= form_tag '/login' do %>
+      <div class="mb-3">
+         <%= label_tag :user_name, 'Name', class: 'form-label'%>
+      </div>
+      <div class="mb-3">
+         <%= text_field_tag :user_name, params[:id],  class: 'form-control', :required => true %>
+      </div>
+      <div class="mb-3">
+         <%= submit_tag "Login", class: 'btn btn-info'%>
+      </div>
+   <%end%>
+</div>

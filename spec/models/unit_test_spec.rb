@@ -1,9 +1,5 @@
 require 'rails_helper'
 
-# RSpec.describe Link, type: :model do
-#   pending "add some examples to (or delete) #{__FILE__}"
-# end
-
 RSpec.describe User, type: :model do
   it { should have_many(:votes) }
   it { should have_many(:articles) }
@@ -11,7 +7,6 @@ end
 
 RSpec.describe Article, type: :model do
   it { should belong_to(:user) }
-  it { should have_one_attached(:image) }
   it { should have_many(:votes) }
 end
 
@@ -21,7 +16,7 @@ RSpec.describe Vote, type: :model do
 end
 
 RSpec.describe User, type: :model do
-  context 'it checks the model' do
+  context 'it checks the User model' do
     it 'checks if the user is created' do
       User.create(user_name: 'Benny')
       expect(User.count).to eq 1
@@ -29,20 +24,31 @@ RSpec.describe User, type: :model do
   end
 end
 
-RSpec.describe Vote, type: :model do
-  context 'it checks the model' do
-    it 'checks if the vote belongs to the article' do
-      Vote.reflect_on_association(:article)
-      expect(vote.macro).to eql(:belongs_to)
-    end
-
-    it 'checks if the vote is created' do
-      User.create(user_name: 'Benny')
+RSpec.describe Category, type: :model do
+  context 'it checks the cagegory model' do
+    it 'tests if a new category object is created' do
       Category.create(name: 'tesla', priority: 1)
-      art = Article.create(title: 'GM Article', text: 'Some News about Gm', user_id: 1, category_id: 1)
-      art.image.attach(io: File.open('C:/Users/paulc/Downloads/gm-pic.png'), filename: 'gm-pic.png')
-      Vote.create(user_id: 1, article_id: nil)
-      expect(Vote.count).to eq 0
+      expect(Category.count).to eq 1
     end
+  end
+end
+
+RSpec.describe Vote, type: :model do
+  it 'checks if a vote gets created' do
+    use = User.create(user_name: 'Benny')
+    cat = Category.create(name: 'tesla', priority: 1)
+    art = Article.create(title: 'GM Article', text: 'Some News about Gm', image: 'pic', user_id: use.id,
+                         category_id: cat.id)
+    Vote.create(user_id: use.id, article_id: art.id)
+    expect(Vote.count).to eq 1
+  end
+end
+
+RSpec.describe Article, type: :model do
+  it 'checks for the creation of an article' do
+    use = User.create(user_name: 'Benny')
+    cat = Category.create(name: 'tesla', priority: 1)
+    Article.create(title: 'GM Article', text: 'Some News about Gm', image: 'pic', user_id: use.id, category_id: cat.id)
+    expect(Article.count).to eq 1
   end
 end

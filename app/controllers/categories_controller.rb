@@ -3,8 +3,7 @@ class CategoriesController < ApplicationController
   def index; end
 
   def show
-    @cat_id = Article.find(params[:id]).category_id
-    @article = Article.where('(category_id = ?)', @cat_id)
+    @article = Category.show(params[:id])
     @author = User.all
   end
 
@@ -12,8 +11,7 @@ class CategoriesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_category
-    @categpry = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 end

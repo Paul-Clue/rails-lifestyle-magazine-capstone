@@ -1,11 +1,17 @@
 module ArticlesHelper
-  def display_image
-    @img = ''
-    if @article.image.attached?
-      @img += "<div style='z-index: 0; display: flex; justify-content: center;'>"
-      @img += "<img src=#{url_for(@article.image)} style='width: 20%; z-index: 0;'>"
-      @img += '</div>'
-      @img.html_safe
+  def tse(art)
+    @pet_e = ''
+    if art.errors.any?
+      @pet_e += "<div id='error_explanation'>"
+      @pet_e += "    <h2><%= pluralize(article.errors.count, 'error') %> prohibited this article from being saved:</h2>"
+
+      @pet_e += '    <ul>'
+      @pet_e += '       <%=article.errors.each do |error|%>'
+      @pet_e += '        <li><%= error.full_message</li>'
+      @pet_e += '      <%= end %>'
+      @pet_e += '    </ul>'
+      @pet_e += '</div>'
     end
+    @pet_e.html_safe
   end
 end
